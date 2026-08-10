@@ -1,0 +1,25 @@
+### 
+POST http://localhost:3333/create-task
+Content-Type: application/json
+
+{
+    "id": "2",
+    "name": "Homem Aranha: De volta ao lar",
+    "genero": "ficcao",
+    "duracao": "21340",
+    "classificacaoetaria": "14"
+}
+
+###
+PUT http://localhost:3333/update-task/2
+Content-Type: application/json
+
+{
+    "name": "Homem Aranha: Sem Volta Para Casa",
+    "genero": "Ação e Ficção",
+    "duracao": "23000",
+    "classificacaoetaria": "12"
+}
+
+### 
+DELETE http://localhost:3333/delete-task/2
