@@ -1,13 +1,19 @@
+GET http://localhost:3333/
+
+###
+GET http://localhost:3333/all-movies
+
+
 ### 
 POST http://localhost:3333/create-task
 Content-Type: application/json
 
 {
-    "id": "2",
-    "name": "Homem Aranha: De volta ao lar",
+    "id": "12",
+    "name": "Duna: Parte 2",
     "genero": "ficcao",
-    "duracao": "21340",
-    "classificacaoetaria": "14"
+    "duracao": "24540",
+    "classificacaoetaria": "1"
 }
 
 ###

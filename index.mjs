@@ -12,7 +12,7 @@ const database = mysql2.createPool({
     database: "alunos_filmes03MC"
 })
 
-app.get("/", (request, response) => {
+app.get("/all-movies", (request, response) => {
     response.json({ message: "Você acessou a rota principal" })
 })
 
