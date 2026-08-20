@@ -83,3 +83,7 @@ app.delete("/delete-task/:id", (request, response) => {
 app.listen(3333, () => {
     console.log("Servidor online na porta 3333")
 })
+
+
+// No final do arquivo backend
+export default app;
