@@ -1,6 +1,6 @@
 async function buscarFilmes() {
     try {
-        const resposta = await fetch("https://filmesbaba-mx34.vercel.app/");
+        const resposta = await fetch("https://filmesbaba-mx34.vercel.app/all-movies");
 
         if (!resposta.ok) {
             throw new Error(`Erro na requisição: ${resposta.status}`);
