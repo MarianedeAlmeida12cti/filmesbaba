@@ -4,7 +4,7 @@ import cors from "cors"
 
 const app = express()
 app.use(express.json())
-app.use(cors()) 
+app.use(cors({ origin: "*" }));
 
 
 
@@ -14,6 +14,10 @@ const database = mysql2.createPool({
     password: "senhaAlunos",
     database: "alunos_filmes03MC"
 })
+
+app.use(cors({
+    origin: "*"
+}));
 
 app.get("/all-movies", (request, response) => {
     const selectCommand = "SELECT * FROM filmes_MarianeAlmeida"
