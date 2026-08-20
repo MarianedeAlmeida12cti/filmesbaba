@@ -1,8 +1,11 @@
 import express from "express"
 import mysql2 from "mysql2"
+import cors from "cors"
 
 const app = express()
 app.use(express.json())
+app.use(cors()) 
+
 
 
 const database = mysql2.createPool({
@@ -13,7 +16,14 @@ const database = mysql2.createPool({
 })
 
 app.get("/all-movies", (request, response) => {
-    response.json({ message: "Você acessou a rota principal" })
+    const selectCommand = "SELECT * FROM filmes_MarianeAlmeida"
+
+    database.query(selectCommand, (error, results) => {
+        if (error) {
+            return response.status(500).json({ erro: "Erro ao buscar filmes no banco", mensagem: error.message })
+        }
+        response.json(results)
+    })
 })
 
 
